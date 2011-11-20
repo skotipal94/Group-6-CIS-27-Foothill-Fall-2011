@@ -20,7 +20,7 @@ public class ContactList {
 		 */
 		//Contact nextContact = new Contact
 		//setValue(firstName, middleInitial, lastName, phoneNumber, streetAddress, city, state, zip, email);
-		
+		System.out.println("addContact called"); //debug
 	}
 	
 	public void sort(){
@@ -30,6 +30,7 @@ public class ContactList {
 		 * returns: nothing
 		 */
 		//getValue(lastName);
+		System.out.println("sort called"); //debug
 	}
 	
 	public ArrayList<String[]> printList(){
@@ -39,6 +40,7 @@ public class ContactList {
 		 * returns: entire list in an ArrayList of String[]
 		 */
 		//getValue();
+		System.out.println("printList called"); //debug
 		return totalList;
 	}
 	
@@ -51,6 +53,7 @@ public class ContactList {
 		 * instead of just a String[]. 
 		 */
 		//getvalue();
+		System.out.println("lastNameSearch called"); //debug
 		return subList;
 	}
 	
@@ -62,6 +65,7 @@ public class ContactList {
 		 * the reason it is an ArrayList is because people share zip codes.
 		 */
 		//getValue();
+		System.out.println("zipSearch called"); //debug
 		return subList;
 	}
 }
