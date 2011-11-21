@@ -16,20 +16,27 @@ public class Main {
 		String state="CA";
 		String zip="95129"; 
 		String email="main@directory.com";
+		String notes = "notes: ";
 		ContactList contact;
 		contact = new ContactList();
-		contact.addContact(firstname, middleInitial, lastName, phoneNumber, streetAddress, city, state, zip, email);
+		contact.addContact(firstname, middleInitial, lastName, phoneNumber, streetAddress, city, state, zip, email, notes);
 		contact.sort();
-		contact.printList();
-		contact.lastNameSearch(lastName);
-        contact.zipSearch(zip);
+		String someStringToBePrinted = contact.returnList();
+		someStringToBePrinted = contact.lastNameSearch(lastName);
+        someStringToBePrinted = contact.zipSearch(zip);
 	}
 }
 
 /*Run:
+Contact constructor called
+setValue() called
 addContact called
+getValue() called
 sort called
 printList called
+getValue() called
 lastNameSearch called
+getValue() called
 zipSearch called
+
 */
