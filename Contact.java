@@ -1,37 +1,75 @@
-//stores all information for 1 contact
+//stores all information for 1 contact RE
 public class Contact {
 	private String fName, lName, mInitial, phoneNum, streetAdd, city, state, zipCode, emailAdd, notes; 
 	
-	//builds and initializes local variables
+	//builds and initializes local variables RE
 	public Contact(){
 		
 		System.out.println("Contact constructor called");
 	}
 	
-	//set local variables from outside source
+	//set local variables from outside source RE
 	public void setValue(String fn, String ln, String mi, String ph, String sa, String ci, 
 			String st, String zc, String ea, String n){
 		
 		System.out.println("setValue() called");
 	}
 	
-	//return a chosen variable based on integer passed in
-	public String getValue(int choice){
-		/*
-		 *list of choice correspondence:
-		 *1-first name
-		 *2-last name
-		 *3-middle initial
-		 *4-phone number
-		 *5-street address
-		 *6-city
-		 *7-state
-		 *8-zipcode
-		 *9-email address
-		 *10-notes
-		*/
-		//put switch here to determine return value
-		System.out.println("getValue() called");
-		return "some string";
+	//returns Contacts last name RE
+	public String getLastName(){
+		return lName;
+	}
+	
+	//returns Contacts first name RE
+	public String getFirstName(){
+		return fName;
+	}
+	
+	//returns Contacts middle initial RE
+	public String getMiddleInitial(){
+		return mInitial;
+	}
+	
+	//returns Contacts phone number RE
+	public String getPhoneNumber(){
+		return phoneNum;
+	}
+	
+	//returns Contacts street address RE
+	public String getStreetAddress(){
+		return streetAdd;
+	}
+	
+	//returns Contacts city RE
+	public String getCity(){
+		return city;
+	}
+	
+	//returns Contacts state RE
+	public String getState(){
+		return state;
+	}
+	
+	//returns Contacts zipcode RE
+	public String getZipCode(){
+		return zipCode;
+	}
+	
+	//returns Contacts email address RE
+	public String getEmailAddress(){
+		return emailAdd;
+	}
+	
+	//returns Contacts notes RE
+	public String getNotes(){
+		return notes;
+	}
+	
+	//returns all Contact information in a string seperated by newlines RE
+	public String getAllInformation(){
+		String contactInfo = fName + "\n" + lName + "\n" + mInitial + "\n" + phoneNum + "\n" + streetAdd + "\n" + city +
+		 "\n" + state + "\n" + zipCode + "\n" + emailAdd + "\n" + notes;
+		
+		return contactInfo;
 	}
 }
