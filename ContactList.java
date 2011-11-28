@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 public class ContactList {
@@ -13,6 +14,7 @@ public class ContactList {
 	private String temp;//test variable, remove for final
 	private Contact nextContact = new Contact();//test object, dot operator will run from contactList, remove for final
 	private int contactListPointer = 0;
+
 	
 	public void addContact(String firstName, String middleInitial, String lastName, String phoneNumber, String streetAddress, String city, String state, String zip, String email, String notes){
 		/*
@@ -25,6 +27,7 @@ public class ContactList {
 		nextContact.setValue(firstName, middleInitial, lastName, phoneNumber, streetAddress, city, state, zip, email, notes);
 		contactList[contactListPointer] = nextContact;
 		contactListPointer++;
+
 	}
 	
   public static Comparator LastNameComparator = new Comparator() {
@@ -46,10 +49,11 @@ public class ContactList {
 		 * NA
 		 */
 		//sort loop here
+		temp = nextContact.getValue(2);//2 will be the value for last name in contact class
 		System.out.println("sort called"); //debug
-	    Arrays.sort(contactList, LastNameComparator);
-	    System.out.println();
-	    System.out.println("Sorted by last name");
+	        Arrays.sort(contactList, LastNameComparator);
+	        System.out.println();
+    	        System.out.println("Sorted by last name");
 
 	}
 	
