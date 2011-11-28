@@ -12,6 +12,7 @@ public class Main {
 	 */
 
 	public static void main(String args[]) {
+	// This method,main, include all the commands to perform the functions based on user input.
 		boolean current = false;
 		Scanner userinput = new Scanner(System.in);
 		ContactList contacts;
