@@ -28,6 +28,9 @@ public class ContactList {
 	}
 	
   public static Comparator LastNameComparator = new Comparator() {
+	  /*
+	   * this function is comparator for comparing lastname values in sort()
+	   */
 	    public int compare(Object person, Object anotherPerson) {
 	      String lastName1 = ((contactList) person).getLastName();
 	      String lastName2 = ((contactList) anotherPerson).getLastName();
@@ -44,7 +47,7 @@ public class ContactList {
 		 */
 		//sort loop here
 		System.out.println("sort called"); //debug
-	    Arrays.sort(contactList, Contact.LastNameComparator);
+	    Arrays.sort(contactList, LastNameComparator);
 	    System.out.println();
 	    System.out.println("Sorted by last name");
 
