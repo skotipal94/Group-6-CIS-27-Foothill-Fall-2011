@@ -1,5 +1,5 @@
-import javax.swing.JOptionPane;
 import java.util.*;
+//Date:12/4/11
 
 /*
  * This program adds new contacts, stores information about the new contact, and then lets the user
@@ -7,7 +7,6 @@ import java.util.*;
  */
 public class Main {
 	/*
-<<<<<<< HEAD
 	 * This class contains the instruction for getting user input to do a
 	 * variety of functions with the class ContactList.
 	 */
@@ -15,6 +14,7 @@ public class Main {
 	public static void main(String args[]) {
 	// This method,main, include all the commands to perform the functions based on user input.
 		boolean current = false;
+		boolean addToListTrueFalse;
 		Scanner userinput = new Scanner(System.in);
 		ContactList contacts;
 		contacts = new ContactList();
@@ -44,14 +44,16 @@ public class Main {
 				String email = userinput.nextLine();
 				System.out.println("Notes: ");
 				String notes = userinput.nextLine();
-				contacts.addContact(firstname, middleInitial, lastName,
+				addToListTrueFalse = contacts.addContact(firstname, middleInitial, lastName,
 						phoneNumber, streetAddress, city, state, zip, email,
 						notes);
+				//print statement if contact not added RE
+				if(addToListTrueFalse == false){
+					System.out.println("no last name entered, contact not added.");
+				}
 				break;
 			}
 			case 2: {
-				Contact getContact;
-				getContact = new Contact();
 				System.out.println("1:Last Name Search\n2:Zip Code Search\n");
 				System.out.println("How would you like to search?");
 				int searchAction = Integer.parseInt(userinput.nextLine());
@@ -69,7 +71,7 @@ public class Main {
 				}
 			}
 			case 3: {
-				System.out.println(contacts.returnList());
+				System.out.print(contacts.returnList());
 				break;
 			}
 			case 4: 
@@ -92,30 +94,3 @@ public class Main {
  * called getValue() called sort called printList called getValue() called
  * lastNameSearch called getValue() called zipSearch called
  */
-=======
-	 * This class contains the 
-	 */
-	public static void main(String args[]){
-		String firstname="Kelly";
-		char middleInitial='M';
-		String lastName="Clarkson";
-		String phoneNumber="(408)-100-1111";
-		String streetAddress="1280 Lynbrook Way"; 
-		String city= "San Jose"; 
-		String state="CA";
-		String zip="95129"; 
-		String email="main@directory.com";
-		Contact contactname;
-		contactname = new Contact();
-		contactname.setValue();
-		ContactList contact;
-		contact = new ContactList();
-		contact.addContact(firstname, middleInitial, lastName, phoneNumber, streetAddress, city, state, zip, email);
-		contact.sort();
-		contact.printList();
-		System.out.println(contact.lastNameSearch(lastName));
-        System.out.println(contact.emailAddressSearch(email));
-        System.out.println(contact.zipSearch(zip));
-	}
-}
->>>>>>> upstream/master
